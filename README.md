@@ -5,7 +5,7 @@ Unauthorized reproduction, distribution, or modification of this code, in whole 
 
 \ ゜ o ゜)ノ 
 =====================
-# 「🖤𝐇𝐄𝐀𝐑𝐓🖤」
+# 𝐇𝐄𝐀𝐑𝐓
   
 [![Heart1](https://media.giphy.com/media/EcAYL5KWnbXyyIAP1B/giphy.gif)](https://discord.gg/z6C2wFH7Ga)]
 
