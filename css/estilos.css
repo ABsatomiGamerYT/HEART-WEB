@@ -61,7 +61,7 @@ nav {
     background-color: #7d2892; /* Color de fondo */
     max-width: 50%; /* Limita el ancho de la barra */
     margin: 0 auto; /* Centra la barra */
-    border-radius: 10px; /* Bordes redondeados para un mejor estilo */
+    border-radius: 5px; /* Bordes redondeados para un mejor estilo */
 }
 
 nav .menu {
@@ -401,7 +401,6 @@ footer {
     border-bottom: 1px solid #ccc;
 }
 
-
 .content-foo {
     text-align: center;
 }
@@ -423,6 +422,7 @@ footer {
     margin: 20px 0 0 0;
     color: #9e9797;
 }
+
 
 /* Estilos para dispositivos móviles */
 @media screen and (max-width: 900px) {
@@ -551,4 +551,92 @@ footer {
     .titulo-final {
         font-size: 20px;
     }
+}
+
+/* Tema claro (por defecto) */
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+.light-theme {
+    background-color: #fff;
+    color: #000;
+}
+
+.dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* Estilos del menú desplegable de temas */
+.theme-switcher {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.theme-button {
+    background-color: #7d2892;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.theme-button:hover {
+    background-color: #ffd700;
+}
+
+/* Estilos para el menú de opciones de tema */
+.theme-options {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.theme-options li {
+    display: block;
+}
+
+.theme-options li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #7d2892;
+    font-size: 16px;
+}
+
+.theme-options li a:hover {
+    background-color: #ffd700;
+}
+
+/* Mostrar el menú de opciones cuando se hace clic en el botón */
+.theme-switcher:hover .theme-options {
+    display: block;
+}
+
+/* Otros estilos en tema oscuro */
+.dark-theme nav {
+    background-color: #333;
+}
+
+.dark-theme .titulo {
+    color: #ffd700; /* Cambiar el color del título en modo oscuro */
+}
+
+.dark-theme .modal {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #000;
 }
