@@ -1,0 +1,815 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'open sans';
+}
+
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo {
+    color: #7d2892;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+
+/* Animación wave */
+.wave svg {
+    display: block;
+    width: 100%;
+}
+
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Estilos para la barra de navegación */
+nav {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #7d2892; /* Color de fondo */
+    max-width: 50%; /* Limita el ancho de la barra */
+    margin: 0 auto; /* Centra la barra */
+    border-radius: 5px; /* Bordes redondeados para un mejor estilo */
+}
+
+nav .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre los enlaces */
+}
+
+nav .menu li {
+    display: inline;
+}
+
+nav .menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu a:hover {
+    color: #ffd700;
+    transform: translateY(-5px);
+}
+
+/* Estilos para la galería de imágenes */
+
+.galeria-port {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.imagen-port {
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.fondo-rosado {
+    background-color: #ffb6c1; /* Color rosado */
+    padding: 20px; /* Espacio interno para separar el contenido del borde */
+    border-radius: 10px; /* Bordes redondeados opcional */
+}
+
+/* Estilos para los elementos en Logos */
+
+.hover-galeria {
+    position: absolute;
+    width: 100%; /* Ancho cuadrado */
+    height: 100%; /* Alto cuadrado */
+    top: 0;
+    transform: scale(0);
+    background: black; /* Cambiado a negro */
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.imagen-port:hover .hover-galeria {
+    opacity: 1;
+}
+
+
+.hover-galeria img {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+.hover-galeria p {
+    color: white;
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+
+/* Header */
+header {
+    width: 100%;
+    height: 600px;
+    background: #bc4e9c;
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/ABsatomiNekobelfondo.jpg);
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/ABsatomiNekobelfondo.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+
+nav {
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+
+nav > a {
+    color: #fff;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+nav > a:hover {
+    text-decoration: underline;
+
+}
+
+
+header .textos-header {
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.textos-header h1 {
+    font-size: 50px;
+    color: #fff;
+}
+
+.textos-header h2 {
+    font-size: 30px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Sección "Sobre nosotros" */
+
+main .sobre-nosotros {
+    padding: 30px 0 60px 0;
+}
+
+.contenedor-sobre-nosotros {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.imagen-about-us {
+    width: 48%;
+}
+
+
+/* letra de Descripción */
+
+.contenido-Descripción h3 {
+    margin-bottom: 10px; /* Agrega un margen inferior de 10px entre los títulos */
+}
+
+/* Estilos para los círculos */
+.contenido-Descripción h3 span {
+    background: #4d0686;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 10px; /* Espacio entre los círculos */
+}
+
+
+
+/* letra de Teams */
+
+.titulo {
+    margin-bottom: 20px; /* Espacio entre el título y el contenido */
+}
+
+.subtitulo {
+    margin-top: 30px; /* Espacio antes del subtítulo */
+    margin-bottom: 10px; /* Espacio después del subtítulo */
+    font-weight: bold; /* Resaltar el subtítulo */
+}
+
+ul {
+    margin-left: 20px; /* Sangría para la lista */
+}
+
+/* Galeria */
+
+.portafolio {
+    background: #f2f2f2;
+}
+
+.galeria-port {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/* lOGO DEL BOT */
+
+.imagen-port {
+    width: 15%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+
+.imagen-port > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+
+/* Estilos para los elementos en .hover-logos */
+
+.hover-logos {
+    position: absolute;
+    width: 100%; /* Ancho cuadrado */
+    height: 100%; /* Alto cuadrado */
+    top: 0;
+    transform: scale(0);
+    background: black; /* Cambiado a negro */
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Estilos para la imagen dentro de .hover-logos */
+.hover-logos img {
+    width: 50px; /* Ancho de la imagen (ajusta según tus necesidades) */
+}
+
+/* Estilos para el texto dentro de .hover-logos */
+.hover-logos p {
+    color: #fff;
+}
+
+/* Efecto de escala al pasar el mouse sobre .imagen-port */
+.imagen-port:hover .hover-logos {
+    transform: scale(1);
+}
+
+
+/* Clients */
+
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards .card {
+    background: #4d0686;
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.cards .card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+}
+
+.cards .card > .contenido-texto-card {
+    width: 60%;
+    color: #fff;
+    
+}
+
+.cards .card > .contenido-texto-card p {
+    font-weight: 300;
+    padding-top: 5px;
+}
+
+/* Estilo del los logos del staff */
+
+
+.staff-ind {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.staff-ind img {
+    width: 30%;
+    margin: 0 auto;
+    border: 5px solid #270b1f;
+    border-radius: 50%;
+}
+
+.staff-ind h3 {
+    margin: 10px 0;
+}
+
+.staff-ind p {
+    font-weight: 100;
+    text-align: center;
+}
+
+
+/* Footer */
+
+footer {
+    background: #414141;
+    padding: 60px 0 30px 0;
+    text-align: center;
+}
+
+.contenedor-footer {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #ccc;
+}
+
+.content-foo {
+    text-align: center;
+}
+
+.content-foo h4 {
+    color: #fff;
+    border-bottom: 3px solid #af20d3;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+.content-foo p {
+    color: #ccc;
+}
+
+.titulo-final {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 900px) {
+
+    header {
+        background-position: center;
+    }
+
+    .contenedor-sobre-nosotros {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .sobre-nosotros .contenido-textos {
+        width: 90%;
+    }
+
+    .imagen-about-us {
+        width: 48%;
+    }
+
+    /* Galeria */
+    
+    .imagen-port {
+        width: 90%;
+    }
+
+    /* Clients */
+    .cards {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards .card {
+        width: 90%;
+    }
+
+    .cards .card:first-child {
+        margin-bottom: 30px;
+    }
+
+    /* servicios */
+    .servicio-cont {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .servicio-ind {
+        width: 100%;
+        text-align: center;
+    }
+
+    .servicio-ind:nth-child(1), .servicio-ind:nth-child(2) {
+        margin-bottom: 60px;
+    }
+
+    .servicio-ind img {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav {
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+
+    nav > a {
+        margin-right: 5px;
+    }
+
+    .textos-header h1 {
+        font-size: 35px;
+    }
+
+    .textos-header h2 {
+        font-size: 20px;
+    }
+
+    /* ABOUT US */
+    .imagen-about-us {
+        margin-bottom: 60px;
+        width: 99%;
+    }
+
+    .sobre-nosotros .contenido-textos {
+        width: 95%;
+    }
+
+    /* Galeria */
+    .imagen-port {
+        width: 95%;
+    }
+
+    /* Clients */
+    .cards .card {
+        height: 450px;
+        display: flex;
+
+        align-items: center;
+    }
+
+    .cards .card img {
+        width: 90px;
+        height: 90px;
+    }
+
+    /* Footer */
+    .content-foo {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .content-foo h4 {
+        border: none;
+    }
+
+    .content-foo p {
+        color: #ccc;
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+    }
+
+    .titulo-final {
+        font-size: 20px;
+    }
+}
+
+/* Tema claro (por defecto) */
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+.light-theme {
+    background-color: #fff;
+    color: #000;
+}
+
+.dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+/* Estilos del menú desplegable de temas */
+.theme-switcher {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.theme-button {
+    background-color: #7d2892;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+}
+
+.theme-button:hover {
+    background-color: #ffd700;
+}
+
+/* Estilos para el menú de opciones de tema */
+.theme-options {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #333;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.theme-options li {
+    display: block;
+}
+
+.theme-options li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    background-color: #7d2892;
+    font-size: 16px;
+}
+
+.theme-options li a:hover {
+    background-color: #ffd700;
+}
+
+/* Mostrar el menú de opciones cuando se hace clic en el botón */
+.theme-switcher:hover .theme-options {
+    display: block;
+}
+
+/* Otros estilos en tema oscuro */
+body.dark-theme {
+    background-color: #121212;
+    color: #f0f0f0;
+}
+
+body.dark-theme nav {
+    background-color: #333;
+}
+
+body.dark-theme .menu a {
+    color: white;
+}
+
+body.dark-theme .titulo-final {
+    color: #ffd700;
+}
+
+/* animacion */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans';
+}
+
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.titulo {
+    color: #7d2892;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Animación de bounce para los enlaces del menú */
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Barra de navegación */
+nav {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #7d2892;
+    max-width: 50%;
+    margin: 0 auto;
+    border-radius: 5px;
+}
+
+nav .menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav .menu li {
+    display: inline;
+}
+
+
+
+/* Remover el destello en los enlaces del menú de navegación */
+nav .menu a {
+    text-shadow: none;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+/* Remover destello de las imágenes */
+.imagen-port img {
+    text-shadow: none; /* Esto lo remueve de las imágenes */
+}
+
+/* Remover destello del botón de cambiar tema */
+.boton-cambiar-tema {
+    text-shadow: none; /* Esto lo remueve del botón */
+}
+
+/* Hover en los enlaces del menú */
+nav .menu a:hover {
+    color: #ffd700; /* Cambia el color, pero sin el destello */
+}
+
+/* Otros estilos */
+header {
+    width: 100%;
+    height: 600px;
+    background: #bc4e9c;
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/ABsatomiGamerYT.gif);
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/ABsatomiGamerYT.gif);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+}
+
+
+.textos-header h1 {
+    font-size: 50px;
+    color: #fff;
+}
+
+/* Otros estilos generales omitidos para brevedad */
+
+
+
+/* Estilos para dispositivos móviles */
+
+@media screen and (max-width: 900px) {
+    nav {
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    nav {
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+
+    .textos-header h1 {
+        font-size: 35px;
+    }
+}
+/* Estilos para dispositivos móviles */
+
+/*  destellos */
+
+.sparkle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #800080; /* Cambiado a color morado */
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(128, 0, 128, 0.7), 0 0 20px rgba(128, 0, 128, 0.5); /* Morado */
+    animation: sparkle 0.5s ease-out forwards;
+}
+
+@keyframes sparkle {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/*  destellos */
+
+
+
