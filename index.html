@@ -9,17 +9,18 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
 </head>
-<body class="light-theme"> <!-- Añade aquí una clase por defecto -->
+<body class="light-theme">
+
+    <!-- Header con menú de navegación -->
     <header>
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Inicio</a></li>
-                <li><a href="informacion.html">Informacion</a></li>
-                <li><a href="imagenes.html">Imagenes</a></li>
+                <li><a href="informacion.html">Información</a></li>
+                <li><a href="imagenes.html">Imágenes</a></li>
                 <li><a href="privacidad.html">Privacidad</a></li>
                 <li><a href="teams.html">Teams</a></li>
             </ul>
-
             <div class="theme-switcher">
                 <button id="toggleTheme" class="theme-button">🌗</button>
                 <ul class="theme-options">
@@ -29,11 +30,16 @@
             </div>
         </nav>
 
-        <section class="textos-header">
-            <h1>HEART</h1>
-        </section>
+        <!-- Animación SVG estilo wave -->
+        <div class="wave" style="height: 100px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                      style="stroke: none; fill: #583b3b;"></path>
+            </svg>
+        </div>
     </header>
 
+    <!-- Sección principal con descripción -->
     <main>
         <section class="contenedor sobre-nosotros">
             <h2 class="titulo">Descripción</h2>
@@ -48,17 +54,19 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="contenedor-footer">
             <div class="content-foo">
-                <a href="https://discord.com/oauth2/authorize?client_id=1266385822827941939"><h4>Añádeme a tu servidor</h4></a>
-                <a href="https://discord.gg/z6C2wFH7Ga"><h4>Discord Soporte HEART</h4></a>
+                <!-- Contenido adicional del footer si lo deseas -->
             </div>
         </div>
         <h2 class="titulo-final">&copy; Todos los derechos reservados Sachi y haruki.yt</h2>
     </footer>
 
-    <script src="galeria-modal.js"></script>
-    <script src="tema.js"></script> <!-- Añade el archivo para el script del tema -->
+    <!-- Scripts -->
+    <script src="java/galeria-modal.js"></script>
+    <script src="java/tema.js"></script>
+    <script src="java/star-cursor.js"></script>
 </body>
 </html>

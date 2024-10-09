@@ -9,37 +9,36 @@
     <link rel="stylesheet" href="css/estilos.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
 </head>
-<body>
-    
-<header>
-    <nav>
-        <ul class="menu">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="informacion.html">informacion</a></li>
-            <li><a href="imagenes.html">imagenes</a></li>
-            <li><a href="privacidad.html">Privacidad</a></li>
-            <li><a href="teams.html">Teams</a></li>
-        </ul>
-        <div class="theme-switcher">
-            <button id="toggleTheme" class="theme-button">🌗</button>
-            <ul class="theme-options">
-                <li><a href="#" id="lightTheme">Blanco</a></li>
-                <li><a href="#" id="darkTheme">Negro</a></li>
+<body class="light-theme">
+    <header>
+        <!-- Menú de navegación -->
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html"> Inicio </a></li>
+                <li><a href="informacion.html"> Informacion </a></li>
+                <li><a href="imagenes.html"> Imagenes </a></li>
+                <li><a href="privacidad.html"> Privacidad </a></li>
+                <li><a href="teams.html"> Teams </a></li>
             </ul>
+            <div class="theme-switcher">
+                <button id="toggleTheme" class="theme-button">🌗</button>
+                <ul class="theme-options">
+                    <li><a href="#" id="lightTheme">Blanco</a></li>
+                    <li><a href="#" id="darkTheme">Negro</a></li>
+                </ul>
+            </div>
+        </nav>
+        </section>
+        <div class="wave" style="height: 100px; overflow: hidden;">
+            <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #583b3b;"></path>
+            </svg>
         </div>
-    </nav>
-    <section class="textos-header">
-        <h1> HEART </h1>
-    </section>
-    <div class="wave" style="height: 150px; overflow: hidden;">
-        <svg viewBox="0 0 500 150" preserveAspectRatio="none" style="height: 100%; width: 100%;">
-            <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
-                style="stroke: none; fill: #fff;"></path>
-        </svg>
-    </div>
-</header>
+    </header>
 
-<div class="contenedor fondo-rosado">
+
+<div class="contenedor fondo-negro">
     <h2 class="titulo">Imágenes</h2>
     <div class="galeria-port">
         <div class="imagen-port">
@@ -83,14 +82,12 @@
 <footer>
     <div class="contenedor-footer">
         <div class="content-foo">
-            <a href="https://discord.com/oauth2/authorize?client_id=1266385822827941939"><h4>Añádeme a tu servidor</h4></a>
-            <a href="https://discord.gg/z6C2wFH7Ga"><h4>Discord Soporte HEART</h4></a>
         </div>
     </div>
     <h2 class="titulo-final">&copy; Todos los derechos reservados Sachi y haruki.yt</h2>
 </footer>
-
-<script src="galeria-modal.js"></script>
-<script src="tema.js"></script> <!-- Añade el archivo para el script del tema -->
+<script src="java/galeria-modal.js"></script>
+<script src="java/tema.js"></script>
+<script src="java/star-cursor.js"></script>
 </body>
 </html>
