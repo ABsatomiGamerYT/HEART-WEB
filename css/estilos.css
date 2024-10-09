@@ -767,21 +767,104 @@ header {
 
 /* Estilos para dispositivos móviles */
 
-@media screen and (max-width: 900px) {
-    nav {
-        text-align: center;
-        padding: 30px 0 0 0;
-    }
+/* Estilos globales para mejorar la legibilidad en dispositivos móviles */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 10px;
+    margin: 0;
 }
 
-@media screen and (max-width: 500px) {
+/* Ajustes generales para el contenedor de la barra de navegación */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    text-align: center; /* Asegura que los elementos dentro de la barra de navegación se alineen al centro */
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    justify-content: center; /* Asegura que los enlaces del menú estén centrados */
+    text-align: center; /* Centra el texto dentro de los enlaces */
+}
+
+.nav-links a {
+    display: inline-block;
+    text-align: center; /* Centra el texto en cada enlace */
+    padding: 10px 20px; /* Espaciado adicional para mejorar la apariencia */
+    text-decoration: none; /* Quita el subrayado */
+}
+
+/* Estilos para pantallas medianas (tablets o dispositivos de pantalla media) */
+@media screen and (max-width: 900px) {
     nav {
+        flex-direction: column;
+        padding: 20px 0;
         text-align: center;
-        padding: 30px 0 0 0;
     }
 
     .textos-header h1 {
-        font-size: 2rem;
+        font-size: 40px; /* Ajustamos el tamaño del título */
+        margin: 10px 0;
+    }
+
+    .textos-header p {
+        font-size: 18px;
+        line-height: 1.4;
+    }
+}
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 500px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .nav-links {
+        display: none; /* Escondemos los links del menú en dispositivos móviles */
+    }
+
+    .menu-hamburguesa {
+        display: block;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .textos-header h1 {
+        font-size: 28px; /* Ajustamos el tamaño de la fuente del título */
+        margin: 10px 0;
+    }
+
+    .textos-header p {
+        font-size: 16px; /* Ajustamos el tamaño de la fuente del párrafo */
+        line-height: 1.5;
+    }
+
+    /* Mejoramos el diseño de los botones/enlaces */
+    button, a {
+        padding: 10px 15px;
+        font-size: 16px;
+        display: inline-block;
+        margin: 10px 0;
+        text-align: center; /* Asegura que el texto dentro de los botones y enlaces esté centrado */
+    }
+
+    /* Menú desplegable al hacer clic en el menú hamburguesa */
+    .menu-abierto .nav-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        text-align: center; /* Centra el contenido del menú desplegable */
+    }
+
+    .nav-links a {
+        padding: 10px 0; /* Ajustamos el padding para que se vea mejor en dispositivos móviles */
+        text-align: center;
     }
 }
 
