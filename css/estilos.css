@@ -764,26 +764,52 @@ header {
 /* Otros estilos generales omitidos para brevedad */
 
 
-
-/* Estilos para dispositivos móviles */
-
+/* Estilos para pantallas medianas (tablets o dispositivos de pantalla media) */
 @media screen and (max-width: 900px) {
     nav {
         text-align: center;
-        padding: 30px 0 0 0;
-    }
-}
-
-@media screen and (max-width: 500px) {
-    nav {
-        text-align: center;
-        padding: 30px 0 0 0;
+        padding: 20px 0; /* Reducimos el padding en pantallas más pequeñas */
     }
 
     .textos-header h1 {
-        font-size: 35px;
+        font-size: 40px; /* Ajustamos el tamaño del título */
+        margin: 10px 0;
     }
 }
+
+/* Estilos para pantallas pequeñas (móviles) */
+@media screen and (max-width: 500px) {
+    nav {
+        text-align: center;
+        padding: 15px 0; /* Menos padding en dispositivos más pequeños */
+    }
+
+    .textos-header h1 {
+        font-size: 28px; /* Disminuimos el tamaño de la fuente en móviles */
+        margin: 10px 0; /* Ajustamos márgenes para una mejor presentación */
+    }
+
+    .textos-header p {
+        font-size: 16px; /* Aumentamos el tamaño del texto del párrafo */
+        line-height: 1.5; /* Aumentamos el espacio entre líneas para mejorar la legibilidad */
+    }
+
+    /* Mejoras generales para móviles */
+    body {
+        padding: 10px;
+        font-size: 16px; /* Aumentamos el tamaño de la fuente para una mejor legibilidad */
+        line-height: 1.6;
+    }
+
+    /* Ajustamos los botones o enlaces */
+    button, a {
+        padding: 10px 15px;
+        font-size: 16px;
+        display: inline-block;
+        margin: 10px 0;
+    }
+}
+
 /* Estilos para dispositivos móviles */
 
 /*  destellos */
