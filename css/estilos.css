@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'open sans';
+    margin: 8px;
 }
 
 .contenedor {
@@ -764,107 +764,130 @@ header {
 /* Otros estilos generales omitidos para brevedad */
 
 
-
 /* Estilos para dispositivos móviles */
-
-/* Estilos globales para mejorar la legibilidad en dispositivos móviles */
-body {
-    font-size: 16px;
-    line-height: 1.6;
-    padding: 10px;
-    margin: 0;
-}
-
-/* Ajustes generales para el contenedor de la barra de navegación */
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    text-align: center; /* Asegura que los elementos dentro de la barra de navegación se alineen al centro */
-}
-
-.nav-links {
-    display: flex;
-    gap: 15px;
-    justify-content: center; /* Asegura que los enlaces del menú estén centrados */
-    text-align: center; /* Centra el texto dentro de los enlaces */
-}
-
-.nav-links a {
-    display: inline-block;
-    text-align: center; /* Centra el texto en cada enlace */
-    padding: 10px 20px; /* Espaciado adicional para mejorar la apariencia */
-    text-decoration: none; /* Quita el subrayado */
-}
-
-/* Estilos para pantallas medianas (tablets o dispositivos de pantalla media) */
 @media screen and (max-width: 900px) {
+
+    header {
+        background-position: center;
+        height: 400px; /* Reduce la altura del header para pantallas más pequeñas */
+    }
+
     nav {
+        text-align: center;
+        padding: 20px 0; /* Menos padding para que no se vea muy grande */
+    }
+
+    .contenedor-sobre-nosotros {
+        flex-direction: column; /* Asegura que el contenido se apile verticalmente */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .imagen-about-us {
+        width: 80%; /* Asegura que la imagen se reduzca en tamaño */
+        margin-bottom: 20px; /* Agrega espacio en la parte inferior */
+    }
+
+    .sobre-nosotros .contenido-textos {
+        width: 95%;
+        padding: 10px; /* Espaciado interno para evitar que se vean apretados los textos */
+    }
+
+    /* Galería */
+    .imagen-port {
+        width: 90%;
+        margin: 10px auto; /* Centra las imágenes en el móvil */
+    }
+
+    /* Clients */
+    .cards {
         flex-direction: column;
-        padding: 20px 0;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cards .card {
+        width: 90%;
+        margin-bottom: 20px; /* Asegura que las tarjetas estén separadas */
+    }
+
+    .cards .card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .servicio-cont {
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .servicio-ind {
+        width: 100%;
         text-align: center;
     }
 
-    .textos-header h1 {
-        font-size: 40px; /* Ajustamos el tamaño del título */
-        margin: 10px 0;
+    .servicio-ind img {
+        width: 80%;
     }
 
-    .textos-header p {
-        font-size: 18px;
-        line-height: 1.4;
+    /* Logo del Bot */
+    .imagen-port {
+        width: 90%; /* Aumenta el tamaño del logo en pantallas pequeñas */
     }
 }
 
-/* Estilos para pantallas pequeñas (móviles) */
 @media screen and (max-width: 500px) {
     nav {
-        flex-direction: column;
         text-align: center;
-        padding: 15px 0;
-    }
-
-    .nav-links {
-        display: none; /* Escondemos los links del menú en dispositivos móviles */
-    }
-
-    .menu-hamburguesa {
-        display: block;
-        font-size: 30px;
-        cursor: pointer;
+        padding: 20px 0;
     }
 
     .textos-header h1 {
-        font-size: 28px; /* Ajustamos el tamaño de la fuente del título */
-        margin: 10px 0;
+        font-size: 1.8rem; /* Ajusta el tamaño del título */
     }
 
-    .textos-header p {
-        font-size: 16px; /* Ajustamos el tamaño de la fuente del párrafo */
-        line-height: 1.5;
+    .textos-header h2 {
+        font-size: 1.2rem; /* Ajusta el subtítulo */
     }
 
-    /* Mejoramos el diseño de los botones/enlaces */
-    button, a {
-        padding: 10px 15px;
-        font-size: 16px;
-        display: inline-block;
-        margin: 10px 0;
-        text-align: center; /* Asegura que el texto dentro de los botones y enlaces esté centrado */
+    /* ABOUT US */
+    .imagen-about-us {
+        margin-bottom: 40px;
+        width: 95%;
     }
 
-    /* Menú desplegable al hacer clic en el menú hamburguesa */
-    .menu-abierto .nav-links {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        text-align: center; /* Centra el contenido del menú desplegable */
+    .sobre-nosotros .contenido-textos {
+        width: 95%;
+        padding: 10px;
     }
 
-    .nav-links a {
-        padding: 10px 0; /* Ajustamos el padding para que se vea mejor en dispositivos móviles */
-        text-align: center;
+    /* Galería */
+    .imagen-port {
+        width: 90%;
+    }
+
+    /* Cards */
+    .cards .card {
+        height: 350px;
+        width: 100%;
+    }
+
+    .cards .card img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Footer */
+    .content-foo {
+        margin-bottom: 10px;
+    }
+
+    .content-foo h4 {
+        font-size: 18px;
+    }
+
+    .titulo-final {
+        font-size: 18px;
     }
 }
 
