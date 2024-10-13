@@ -14,9 +14,3 @@ for (let i = 0; i < img.length; i++) {
         captionText.innerHTML = this.nextElementSibling.innerHTML; // Toma el texto del caption
     }
 }
-
-// Cuando el usuario hace clic en (x), cierra el modal
-var span = document.getElementsByClassName("close")[0];
-span.onclick = function() { 
-    modal.style.display = "none";
-}
