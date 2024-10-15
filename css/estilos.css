@@ -116,6 +116,45 @@ nav .menu a {
     border-radius: 10px; /* Bordes redondeados opcional */
 }
 
+
+.modal {
+    display: none; /* Inicialmente oculto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* marco morado de la imagen */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80%;
+    border: 5px solid #7d2892; /* Borde morado */
+    border-radius: 10px; /* Bordes redondeados opcional */
+}
+
 /* Estilos para los elementos en Logos */
 
 .hover-galeria {
@@ -886,6 +925,15 @@ header {
 
     .titulo-final {
         font-size: 20px;
+    }
+}
+
+/* Ajustes para pantallas móviles */
+@media only screen and (max-width: 600px) {
+    .modal-content {
+        max-width: 90%; /* Se ajusta un poco más para pantallas pequeñas */
+        max-height: 90%;
+        border: 5px solid #7d2892; /* Mantiene el borde morado */
     }
 }
 
