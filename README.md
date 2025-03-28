@@ -5,7 +5,7 @@
 [![Heart1](https://media.giphy.com/media/EcAYL5KWnbXyyIAP1B/giphy.gif)](https://discord.gg/K3jhPqDHr2)]
 
 
-### Useful links
+### SOPORTE
 - [Discord support server](https://discord.gg/K3jhPqDHr2)
 
 
