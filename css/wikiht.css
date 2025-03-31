@@ -389,11 +389,324 @@ nav h2 {
     }
 }
 
-/* Estilo opcional para mejorar el layout en pantallas pequeñas */
-@media (max-width: 768px) {
-    .user-info {
-      gap: 5px;
-      font-size: 14px;
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    z-index: 10;
+}
+
+
+/* Ajustes generales para móviles */
+@media screen and (max-width: 768px) {
+    
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 1px;
+        background-color: #98859c;
+        background-repeat: no-repeat;
+        overflow-x: hidden;
+    }
+
+    /* Ajuste del encabezado y logo */
+    header {
+        position: relative;
+        text-align: center;
+        top: 10px;
+        left: 0;
+        padding: 5px;
+        width: 100%;
+    }
+
+    #logo-link {
+        justify-content: center;
+        font-size: 18px;
+    }
+
+    .logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
+    }
+
+    .mi-imagen {
+        position: absolute;
+        width: 300px;
+        height: 100px;
+        margin-top: 10px;
+        top: 10px; /* La imagen se mantiene en esta posición */
+        left: 20px; /* Ajusta la posición horizontal */
+    }
+    
+    #content {
+        position: relative; /* Mantiene su posición dentro del contenedor */
+        top: 0; /* Mantiene el contenido en su posición original */
+        left: 20px; /* Ajusta la posición horizontal */
+        border-radius: 1px;
+        background-color: rgba(255, 255, 255, 0.1); /* Fondo */
+        color: rgb(0, 0, 0);
+        width: 340px;
+        max-width: 330px;
+        margin-top: 100px; /* Aumenta el margen para mover el contenido hacia abajo */
+        padding: 20px; /* Da algo de espacio dentro del contenido */
+        resize: both; /* Permite cambiar el tamaño tanto horizontal como vertical */
+        overflow: auto; /* Permite desplazarse si el contenido es demasiado grande */
+        min-height: 150px; /* Establece una altura mínima */
+    }
+    
+    strong {
+        font-weight: bold;
+        font-size: 5vw;
+        display: flex;
+        justify-content: center; /* Centrar horizontalmente */
+        align-items: center; /* Centrar verticalmente */
+        height: 8vh; /* Ocupa toda la pantalla */
+        left: 50px; /* Mover a la derecha */
+        top: 50px;
+        margin-top: 40px; /* Ajusta este valor para mover el texto un poco más abajo */
+    }
+    
+    /* Estilo para el encabezado h1 */
+    h1 {
+        position: relative;
+        font-size: 24px;
+        text-align: center;
+        color: rgb(0, 0, 0);  /* Cambia el color si es necesario */
+        margin-bottom: 20px;
+        display: block; /* Asegura que el h1 sea un bloque y esté en la posición correcta */
+        margin-top: 20px; /* Agrega un margen arriba para que no esté pegado a los botones */
+    }
+
+    /* Ajuste del menú lateral */
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .menu-btn {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px;
+        margin-bottom: 10px; /* Asegura que haya un espacio entre los botones */
+    }
+
+/* Estilo para los botones desplegables */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0; /* Más espacio entre cada dropdown */
+    width: 100%;
+}
+
+
+.dropdown-btn {
+    width: 100%;
+    padding: 12px;
+    background: #444;
+    color: white;
+    border: 2px solid purple;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(/img/HEART.jpg) no-repeat;
+
+}
+
+.dropdown-btn:hover {
+    background-color: #555;
+}
+
+/* Contenido del Dropdown con animación */
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+    background-color: #f9fbfd;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+/* Estilo para los botones desplegables (dropdown) */
+#dropdownUserTag {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: 500; /* Peso de la fuente */
+    color: #fff; /* Color blanco para el texto */
+    text-align: center; /* Asegura que el texto esté centrado */
+    padding: 10px 0; /* Añade algo de espacio alrededor del texto */
+    width: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del contenedor */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.dropdown-btn {
+    width: 100%;
+    padding: 12px;
+    background: #444;
+    color: white;
+    border: 2px solid purple;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.dropdown-btn:hover {
+    background-color: #555;
+}
+
+.dropdown-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out; /* Efecto de deslizamiento */
+    background-color: #f9fbfd;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.dropdown-content button {
+    padding: 10px 15px;
+    background-color: #444;
+    color: white;
+    border: 2px solid purple;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.dropdown-content button:hover {
+    background-color: #555;
+}
+
+/* Cuando el dropdown está activo, el contenido se muestra */
+.dropdown-content.active {
+    max-height: 300px; /* Ajuste para contenido */
+    padding: 10px;
+}
+
+
+.dropdown-content h1, .dropdown-content p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* Para hacer que se muestre el contenido del dropdown */
+
+.dropdown:hover .dropdown-content {
+    max-height: 300px; /* Cuando está en hover */
+}
+
+/* Estilos para las subsecciones */
+
+.content-section {
+    display: none;
+    margin-bottom: 20px; /* Espacio entre las secciones */
+    padding-top: 100px;
+    margin-top: 100px;
+    position: relative;
+    left: -250px;
+    width: 250px; 
+}
+
+/* Asegurar que los botones de cada subsección estén alineados verticalmente */
+.content-section .dropdown {
+    margin-bottom: 10px;
+    display: block;
+    flex-direction: column; /* Alineación vertical */
+}
+
+
+
+/* Menú desplegable */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 101%;
+    right: 0;
+    transform: translateX(0%);
+    text-transform: uppercase;
+    min-width: 200px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    animation: fadeIn 0.2s ease-in-out;
+    z-index: 100;
+}
+
+/* Mostrar menú */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Encabezado del menú */
+.menu-header {
+    padding: 12px;
+    color: white;
+    background-color: #262626;
+}
+
+/* Línea separadora */
+.separator {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 5px 0;
+}
+
+/* Elementos del menú */
+.menu-item {
+    padding: 10px 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
 
@@ -410,128 +723,373 @@ footer {
     z-index: 10;
 }
 
-@media (max-width: 768px) {
-    .user-info {
-        gap: 5px;
-        font-size: 14px;
+    /* Ajustes para que los botones Slash y Prefix estén en una columna */
+    .slash-prefix-buttons {
+        display: flex;
+        flex-direction: column; /* Apilar los botones verticalmente */
+        align-items: center;
+        width: 100%;
     }
+
+    .slash-prefix-btn {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 10px; /* Espaciado entre los botones */
+        background: #444;
+        color: white;
+        border: 2px solid purple;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+    .slash-prefix-btn:hover {
+        background-color: #555;
+    }
+
 }
 
-/* Estilos para dispositivos móviles */
-@media screen and (max-width: 768px) {
+
+/* Estilos para dispositivos móviles en horizontal (636 x 305) */
+@media screen and (max-width: 636px) and (max-height: 305px) {
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
     body {
-        font-size: 16px;
+        margin: 1px;
+        background-color: #98859c;
+        background-repeat: no-repeat;
         overflow-x: hidden;
-        background-color: #121212;
     }
 
-    .contenedor {
-        width: 95%;
-        padding: 20px;
-    }
-
-    .titulo {
-        font-size: 24px;
-        margin-bottom: 40px;
-    }
-
-    nav {
-        max-width: 100%;
-        text-align: center;
-        padding: 10px;
-    }
-
-    nav .menu {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 0;
-        max-width: 305px;
-        height: 100px;
-        overflow: hidden;
-        flex-wrap: wrap;
-    }
-
-    nav .menu a {
-        font-size: 10px;
-        padding: 3px 6px;
-        white-space: nowrap;
-    }
-
+    /* Ajuste del encabezado y logo */
     header {
-        width: 100%;
-        height: 270px;
-        background: #bc4e9c;
-        background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(/img/HT.png);
-        background-size: cover;
-        background-position: center center;
-        background-attachment: fixed;
         position: relative;
+        text-align: center;
+        top: 10px;
+        left: 0;
+        padding: 5px;
+        width: 100%;
     }
 
-    header .header-img {
-        width: 280px;
-        height: auto;
-        position: absolute;
-        top: 70%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
-    .galeria-port {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .imagen-port {
-        width: 90%;
-    }
-
-    .textos-header h1 {
-        font-size: 32px;
-    }
-
-    .textos-header h2 {
+    #logo-link {
+        justify-content: center;
         font-size: 18px;
     }
 
-    header .header-img {
-        max-width: 50%;
-        height: auto;
-        display: block;
-        margin: 0 auto;
+    .logo {
+        width: 40px;
+        height: 40px;
+        margin-right: 5px;
     }
 
-    .contenedor-sobre-nosotros {
-        flex-direction: column;
-        align-items: center;
+    .mi-imagen {
+        position: absolute;
+        width: 300px;
+        height: 100px;
+        margin-top: 10px;
+        top: 10px; /* La imagen se mantiene en esta posición */
+        left: 20px; /* Ajusta la posición horizontal */
+    }
+    
+    #content {
+        position: relative; /* Mantiene su posición dentro del contenedor */
+        top: 0; /* Mantiene el contenido en su posición original */
+        left: 20px; /* Ajusta la posición horizontal */
+        border-radius: 1px;
+        background-color: rgba(255, 255, 255, 0.1); /* Fondo */
+        color: rgb(0, 0, 0);
+        width: 340px;
+        max-width: 330px;
+        margin-top: 100px; /* Aumenta el margen para mover el contenido hacia abajo */
+        padding: 20px; /* Da algo de espacio dentro del contenido */
+        resize: both; /* Permite cambiar el tamaño tanto horizontal como vertical */
+        overflow: auto; /* Permite desplazarse si el contenido es demasiado grande */
+        min-height: 150px; /* Establece una altura mínima */
+    }
+    
+    strong {
+        font-weight: bold;
+        font-size: 5vw;
+        display: flex;
+        justify-content: center; /* Centrar horizontalmente */
+        align-items: center; /* Centrar verticalmente */
+        height: 8vh; /* Ocupa toda la pantalla */
+        left: 50px; /* Mover a la derecha */
+        top: 50px;
+        margin-top: 40px; /* Ajusta este valor para mover el texto un poco más abajo */
+    }
+    
+    /* Estilo para el encabezado h1 */
+    h1 {
+        position: relative;
+        font-size: 24px;
+        text-align: center;
+        color: rgb(0, 0, 0);  /* Cambia el color si es necesario */
+        margin-bottom: 20px;
+        display: block; /* Asegura que el h1 sea un bloque y esté en la posición correcta */
+        margin-top: 20px; /* Agrega un margen arriba para que no esté pegado a los botones */
+    }
+
+    /* Ajuste del menú lateral */
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding: 15px;
         text-align: center;
     }
 
-    .imagen-about-us {
+    .menu-btn {
+        width: 100%;
+        font-size: 14px;
+        padding: 8px;
+        margin-bottom: 10px; /* Asegura que haya un espacio entre los botones */
+    }
+
+/* Estilo para los botones desplegables */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0; /* Más espacio entre cada dropdown */
+    width: 100%;
+}
+
+
+.dropdown-btn {
+    width: 100%;
+    padding: 12px;
+    background: #444;
+    color: white;
+    border: 2px solid purple;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(/img/HEART.jpg) no-repeat;
+
+}
+
+.dropdown-btn:hover {
+    background-color: #555;
+}
+
+/* Contenido del Dropdown con animación */
+.dropdown-content {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out;
+    background-color: #f9fbfd;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+/* Estilo para los botones desplegables (dropdown) */
+#dropdownUserTag {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el texto horizontalmente */
+    align-items: center; /* Centra el texto verticalmente */
+    font-size: 16px; /* Tamaño de la fuente */
+    font-weight: 500; /* Peso de la fuente */
+    color: #fff; /* Color blanco para el texto */
+    text-align: center; /* Asegura que el texto esté centrado */
+    padding: 10px 0; /* Añade algo de espacio alrededor del texto */
+    width: 100%; /* Asegura que el contenedor ocupe todo el espacio disponible */
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño del contenedor */
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.dropdown-btn {
+    width: 100%;
+    padding: 22px;
+    background: #444;
+    color: white;
+    border: 2px solid purple;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.dropdown-btn:hover {
+    background-color: #555;
+}
+
+.dropdown-content {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.5s ease-in-out; /* Efecto de deslizamiento */
+    background-color: #f9fbfd;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.dropdown-content button {
+    padding: 10px 15px;
+    background-color: #444;
+    color: white;
+    border: 2px solid purple;
+    text-align: left;
+    cursor: pointer;
+    transition: background 0.3s;
+    width: 100%;
+}
+
+.dropdown-content button:hover {
+    background-color: #555;
+}
+
+/* Cuando el dropdown está activo, el contenido se muestra */
+.dropdown-content.active {
+    max-height: 300px; /* Ajuste para contenido */
+    padding: 10px;
+}
+
+
+.dropdown-content h1, .dropdown-content p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* Para hacer que se muestre el contenido del dropdown */
+
+.dropdown:hover .dropdown-content {
+    max-height: 300px; /* Cuando está en hover */
+}
+
+/* Estilos para las subsecciones */
+
+.content-section {
+    display: none;
+    margin-bottom: 20px; /* Espacio entre las secciones */
+    padding-top: 100px;
+    margin-top: 100px;
+    position: relative;
+}
+
+/* Asegurar que los botones de cada subsección estén alineados verticalmente */
+.content-section .dropdown {
+    margin-bottom: 20px;
+    display: block;
+    flex-direction: column; /* Alineación vertical */
+}
+
+
+
+/* Menú desplegable */
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 101%;
+    right: 0;
+    transform: translateX(0%);
+    text-transform: uppercase;
+    min-width: 200px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    animation: fadeIn 0.2s ease-in-out;
+    z-index: 100;
+}
+
+/* Mostrar menú */
+.dropdown-menu.show {
+    display: block;
+}
+
+/* Encabezado del menú */
+.menu-header {
+    padding: 12px;
+    color: white;
+    background-color: #262626;
+}
+
+/* Línea separadora */
+.separator {
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 5px 0;
+}
+
+/* Elementos del menú */
+.menu-item {
+    padding: 10px 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+.menu-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    z-index: 10;
+}
+
+    /* Ajustes para que los botones Slash y Prefix estén en una columna */
+    .slash-prefix-buttons {
+        display: flex;
+        flex-direction: column; /* Apilar los botones verticalmente */
+        align-items: center;
         width: 100%;
     }
 
-    .cards {
-        flex-direction: column;
-        align-items: center;
+    .slash-prefix-btn {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 10px; /* Espaciado entre los botones */
+        background: #444;
+        color: white;
+        border: 2px solid purple;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background 0.3s;
     }
 
-    .cards .card {
-        width: 90%;
-        margin-bottom: 20px;
-    }
-
-    .staff-ind {
-        width: 80%;
-    }
-
-    .staff-ind img {
-        width: 50%;
-    }
-
-    .contenedor-footer {
-        flex-direction: column;
-        text-align: center;
+    .slash-prefix-btn:hover {
+        background-color: #555;
     }
 }
